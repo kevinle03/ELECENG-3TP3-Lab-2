@@ -1,0 +1,18 @@
+f = SimpleFunctions();
+n = -2:5;
+n_y = -4:10;
+
+
+%Part A
+x_a = f.unitstep(n) - f.unitstep(n-3);
+v_a = f.unitstep(n) - f.unitstep(n-4);
+y_a = conv(x_a,v_a);
+length(y_a)
+
+subplot(3,1,1);
+stem(n,x_a,'LineWidth',2);
+subplot(3,1,2);
+stem(n,v_a,'LineWidth',2);
+subplot(3,1,1);
+stem(n_y,y_a,'LineWidth',2);
+%text(2,1,'Part A, Kevin Le 400385350','FontSize',9);
